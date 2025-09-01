@@ -88,9 +88,9 @@ function App() {
           {/* Main CTA Section */}
           <div className="space-y-8">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight leading-tight">
-              Get Any Product
+              Get Any Product Details
               <br />
-              <span className="text-blue-700">Delivered to You</span>
+              <span className="text-blue-700">Delivered to You Instantly</span>
             </h2>
             
             <p className="text-lg md:text-xl text-gray-600 font-normal leading-relaxed max-w-xl mx-auto">
