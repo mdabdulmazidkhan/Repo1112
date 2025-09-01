@@ -94,8 +94,8 @@ function App() {
             </h2>
             
             <p className="text-lg md:text-xl text-gray-600 font-normal leading-relaxed max-w-xl mx-auto">
-              Simply tell us what you need, and we'll handle the rest. 
-              Experience effortless shopping like never before.
+              Simply tell us the product name, and we’ll find the best deals and coupons for you.
+              Get all the details instantly on your email and save up to 50%!
             </p>
           </div>
           
