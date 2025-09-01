@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  /* Custom focus ring for better accessibility */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-3 focus:ring-blue-200;
+  }
+
+  /* Enhanced shadow for elevated elements */
+  .shadow-elevated {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Smooth transitions for interactive elements */
+  .transition-smooth {
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* Custom tilted button styling */
+  .button {
+    width: 150px;
+    padding: 0;
+    border: none;
+    transform: rotate(5deg);
+    transform-origin: center;
+    font-family: "Gochi Hand", cursive;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 #494a4b;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: #5cdb95;
+  }
+
+  .button span {
+    background: #f1f5f8;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 2px solid #494a4b;
+  }
+
+  .button:active {
+    transform: rotate(5deg) translateY(5px);
+    padding-bottom: 0px;
+    outline: 0;
+  }
+
+  .button:hover {
+    transform: rotate(5deg) scale(1.05);
+  }
+
+  .button:focus {
+    outline: 2px solid #5cdb95;
+    outline-offset: 2px;
+  }
+
+  /* Modal button variant with disabled state */
+  .modal-button:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+    transform: rotate(5deg);
+  }
+
+  .modal-button:disabled span {
+    background: #e2e8f0;
+    color: #64748b;
+    border-color: #94a3b8;
+  }
+
+  .modal-button:disabled:hover {
+    transform: rotate(5deg);
+    background-color: #94a3b8;
+  }
+
+  .modal-button:disabled:active {
+    transform: rotate(5deg);
+    padding-bottom: 3px;
+  }
+
+  /* Custom button glow effect - kept for other elements */
+  .btn-glow {
+    box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39);
+  }
+
+  .btn-glow:hover {
+    box-shadow: 0 6px 20px 0 rgba(37, 99, 235, 0.5);
+  }
+
+  /* Enhanced social icon hover effects */
+  .social-icon-hover {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  /* Subtle background pattern for cornsilk */
+  .cornsilk-bg {
+    background-color: #fff8dc;
+    background-image: 
+      radial-gradient(circle at 25px 25px, rgba(255, 255, 255, 0.1) 2%, transparent 2%), 
+      radial-gradient(circle at 75px 75px, rgba(255, 255, 255, 0.1) 2%, transparent 2%);
+    background-size: 100px 100px;
+  }
+}
+
+/* Remove default styles */
+img {
+  object-position: top;
+}
+
+.fixed {
+  position: fixed;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animations */
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s ease-out;
+}
