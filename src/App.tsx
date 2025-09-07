@@ -52,7 +52,7 @@ function App() {
           {/* Social Icons - Top Right */}
           <div className="flex space-x-4">
             <a
-              href="https://www.youtube.com/watch?v=6ecTO22ulRM"
+              href="https://www.youtube.com/watch?v=mDfyW9JRI_s"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 text-gray-700 hover:text-red-600 hover:bg-white/50 rounded-lg transition-all duration-200 hover:scale-110"
